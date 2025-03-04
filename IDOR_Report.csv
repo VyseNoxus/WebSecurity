@@ -1,3 +1,0 @@
-IDOR Detected,Recommendation
-"[!] Possible IDOR detected: http://test2214.sytes.net/dashboard.php?user_id=2","Implement proper access control: Ensure users can only access their own data. Use Role-Based Access Control (RBAC)."
-"[!] Possible IDOR detected: http://test2214.sytes.net/dashboard.php?user_id=3","Implement proper access control: Ensure users can only access their own data. Use Role-Based Access Control (RBAC)."
