@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "idor_guard/idor_guard/lib/jsoup-1.18.3.jar"
+    ]
+}

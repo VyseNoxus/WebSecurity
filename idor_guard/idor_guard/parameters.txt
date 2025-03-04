@@ -1,7 +1,0 @@
-user_id
-account_id
-profile_id
-order_id
-customer_id
-member_id
-invoice_id
