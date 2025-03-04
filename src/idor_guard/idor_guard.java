@@ -1,4 +1,4 @@
-package web_crawler;
+package idor_guard;
 
 import java.awt.*;
 import javax.swing.*;
@@ -18,7 +18,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-public class crawler {
+public class idor_guard {
 
 	private JFrame frame;
     private JTextField urlField, usernameField, passwordField, depthField;
@@ -30,7 +30,7 @@ public class crawler {
     private Set<String> idorParameters = new HashSet<>();
     private List<String> idorEntries = new ArrayList<>();
     
-    public crawler() {
+    public idor_guard() {
         frame = new JFrame("IDOR Guard");
         frame.setSize(600, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -242,7 +242,7 @@ public class crawler {
                 String originalValue = kv[1];
 
                 if (idorParameters.contains(key)) { // **Only test parameters in dictionary**
-                    SwingUtilities.invokeLater(() -> resultArea.append("[+] Testing IDOR on: " + key + "\n"));
+                    SwingUtilities.invokeLater(() -> resultArea.append("[+] Testing IDOR on: " + url + "\n"));
 
                     for (int i = 1; i <= 10; i++) {
                         String testUrl = base + "?" + key + "=" + i;
@@ -345,7 +345,7 @@ public class crawler {
     }
     
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(crawler::new);
+        SwingUtilities.invokeLater(idor_guard::new);
     }
 
 }
