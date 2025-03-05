@@ -249,7 +249,6 @@ public class idor_guard {
                 if (kv.length != 2) {
                     continue; // skip if not a valid key=value pair
                 }
-                System.out.println("Am i here?");
                 String key = kv[0].toLowerCase();
                 String originalValue = kv[1];
     
